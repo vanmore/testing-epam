@@ -30,7 +30,7 @@ public class FakeGroupPopulator {
         stud.setMarks(new ArrayList<Integer>(Arrays.asList(10,10,9,9)));
         group.addStudent(stud);
 
-        stud = new Student("Roman", "Grigoriev");
+        stud = new Student("Artem", "Udodov");
         stud.setMarks(new ArrayList<Integer>(Arrays.asList(4,4,5,4)));
         group.addStudent(stud);
     };
