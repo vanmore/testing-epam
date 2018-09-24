@@ -8,6 +8,7 @@ public class Student {
     private String lastName;
     private List<Integer> marks;
 
+
     Student(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -22,7 +23,6 @@ public class Student {
         this.firstName = firstName;
     }
 
-
     public String getLastName() {
         return lastName;
     }
@@ -30,7 +30,6 @@ public class Student {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-    
 
     public void setMarks(ArrayList<Integer> marks) {
         this.marks = marks;
@@ -41,14 +40,14 @@ public class Student {
     }
 
     public double getAverageMark() {
-        double average = 0;
+        double result = 0;
         int counter = 0;
         for(int mark: marks) {
-            average += mark;
+            result += mark;
             counter++;
         }
         if (counter != 0) {
-            return average/counter;
+            return result/counter;
         }
 
         return 0;
@@ -61,12 +60,10 @@ public class Student {
         stringBuilder.append(" ");
         stringBuilder.append(lastName);
         stringBuilder.append(":  ");
-
         for(int mark: marks) {
             stringBuilder.append(mark);
             stringBuilder.append(" ");
         }
-
         stringBuilder.append(" average: ");
         stringBuilder.append(getAverageMark());
 
