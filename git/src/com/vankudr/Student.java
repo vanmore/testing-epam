@@ -35,6 +35,7 @@ public class Student {
         this.marks = marks;
     }
 
+    //maybe there is also should be removeMark method
     public void addMark(int markToAdd) {
         marks.add(markToAdd);
     }
