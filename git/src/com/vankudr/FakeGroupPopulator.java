@@ -33,5 +33,9 @@ public class FakeGroupPopulator {
         stud = new Student("Maxim", "Peperev");
         stud.setMarks(new ArrayList<Integer>(Arrays.asList(4,4,5,4)));
         group.addStudent(stud);
+
+        stud = new Student("Artem", "Udodov");
+        stud.setMarks(new ArrayList<Integer>(Arrays.asList(4,4,5,4)));
+        group.addStudent(stud);
     };
 }
