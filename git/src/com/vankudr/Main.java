@@ -8,6 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+
         StudyGroup group9 = new StudyGroup("9");
 
         FakeGroupPopulator fakeGroupPopulator = new FakeGroupPopulator();

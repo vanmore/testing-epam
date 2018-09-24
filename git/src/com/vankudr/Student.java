@@ -14,13 +14,14 @@ public class Student {
         marks = new ArrayList<Integer>();
     }
 
-    public String getFirstName() {
+    public String updateFirstName() {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
+    public void updateFirstName(String firstName) {
         this.firstName = firstName;
     }
+
 
     public String getLastName() {
         return lastName;
