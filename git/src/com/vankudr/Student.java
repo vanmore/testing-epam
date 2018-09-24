@@ -30,11 +30,7 @@ public class Student {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-
-    public List<Integer> getMarks() {
-        List marksOut = new ArrayList(marks);
-        return marksOut;
-    }
+    
 
     public void setMarks(ArrayList<Integer> marks) {
         this.marks = marks;
