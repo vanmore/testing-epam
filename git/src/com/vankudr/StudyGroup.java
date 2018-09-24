@@ -16,8 +16,8 @@ public class StudyGroup {
     }
 
 
-    public void addStudent(Student student) {
-        this.students.add(student);
+    public void addStudent(Student studentToAdd) {
+        this.students.add(studentToAdd);
     }
 
     public StudyGroup(String groupName) {
