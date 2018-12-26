@@ -74,6 +74,10 @@ public class MainPage {
         checkVisibility(toField).sendKeys(city);
         checkVisibility(toField).sendKeys(Keys.ENTER);
     }
+    public void passangersFieldClick(){
+        checkVisibility(passangersField).click();
+
+    }
 
     public String getFlightDestinationPointText() {
         return toField.getText();

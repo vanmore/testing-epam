@@ -7,6 +7,8 @@ import by.van.page.CheckinPage;
 import by.van.page.MainPage;
 import by.van.steps.MainPageSteps;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -23,9 +25,17 @@ public class Tests {
 
     @BeforeMethod
     public void init() {
-        System.setProperty("webdriver.gecko.driver","resources/geckodriver");
+        System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
+        ChromeOptions options = new ChromeOptions();
+//        options.addArguments("--headless");
+//        options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+//        options.addArguments("--no-sandbox"); // Bypass OS security model
+        driver = new ChromeDriver(options);
 
-        driver = new FirefoxDriver();
+//
+//        System.setProperty("webdriver.gecko.driver","resources/geckodriver");
+//
+//        driver = new FirefoxDriver();
         driver.get("https://www.icelandair.com/ru-ru/");
         mainPage = new MainPage(driver);
         checkinPage = new CheckinPage(driver);
@@ -42,14 +52,14 @@ public class Tests {
         Assert.assertTrue(mainPageSteps.notFoundWarningIsPresent(data));
     }
 
-    @Test
-    public void atLeastOneAdultShouldBeOnBoard() {
-        FlightData data = new FlightData();
-        data.setFlightStartingPoint("Amsterdam");
-        data.setFlightDestinationPoint("Boston");
-
-        Assert.assertTrue(mainPageSteps.adultIsOnBoard(data));
-    }
+//    @Test
+//    public void atLeastOneAdultShouldBeOnBoard() {
+//        FlightData data = new FlightData();
+//        data.setFlightStartingPoint("Amsterdam");
+//        data.setFlightDestinationPoint("Boston");
+//
+//        Assert.assertTrue(mainPageSteps.adultIsOnBoard(data));
+//    }
 
     @Test
     public void shouldNotCheckInWithInvalidData() {

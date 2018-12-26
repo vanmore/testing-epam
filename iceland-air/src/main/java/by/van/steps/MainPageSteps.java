@@ -22,7 +22,7 @@ public class MainPageSteps {
         mainPage.setFlightStartingPoint(data.getFlightStartingPoint());
         mainPage.setFlightDestinationPoint(data.getFlightDestinationPoint());
         mainPage.setOnewWayDirection();
-        mainPage.passangersField.click();
+        mainPage.passangersFieldClick();
         mainPage.addChild();
         mainPage.removeAdult();
 
