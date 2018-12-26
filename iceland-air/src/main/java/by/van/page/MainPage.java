@@ -66,13 +66,13 @@ public class MainPage {
     }
 
     public void setFlightStartingPoint(String city) {
-        fromField.sendKeys(city);
-        fromField.sendKeys(Keys.ENTER);
+        checkVisibility(fromField).sendKeys(city);
+        checkVisibility(fromField).sendKeys(Keys.ENTER);
     }
 
     public void setFlightDestinationPoint(String city) {
-        toField.sendKeys(city);
-        toField.sendKeys(Keys.ENTER);
+        checkVisibility(toField).sendKeys(city);
+        checkVisibility(toField).sendKeys(Keys.ENTER);
     }
 
     public String getFlightDestinationPointText() {
@@ -80,13 +80,13 @@ public class MainPage {
     }
 
     public void setCheckinLastNameField(String lastName) {
-        checkinLastNameField.sendKeys(lastName);
-        checkinLastNameField.sendKeys(Keys.ENTER);
+        checkVisibility(checkinLastNameField).sendKeys(lastName);
+        checkVisibility(checkinLastNameField).sendKeys(Keys.ENTER);
     }
 
     public void setCheckinBookingReferenceField(String code) {
-        checkinBookingReferenceField.sendKeys(code);
-        checkinBookingReferenceField.sendKeys(Keys.ENTER);
+        checkVisibility(checkinBookingReferenceField).sendKeys(code);
+        checkVisibility(checkinBookingReferenceField).sendKeys(Keys.ENTER);
     }
 //
 //    public String getMessageTitle() {
@@ -94,19 +94,19 @@ public class MainPage {
 //    }
 
     public void setOnewWayDirection() {
-        oneWayRadioButton.click();
+        checkVisibility(oneWayRadioButton).click();
     }
 
     public void addChild() {
-        addChildButton.click();
+        checkVisibility(addChildButton).click();
     }
 
     public void removeAdult() {
-        removeAdultButton.click();
+        checkVisibility(removeAdultButton).click();
     }
 
     public boolean adultIsOnBoard() {
-        return Integer.parseInt(numOfAdultsDisplayer.getText()) > 0;
+        return Integer.parseInt(checkVisibility(numOfAdultsDisplayer).getText()) > 0;
     }
 
     private WebElement checkVisibility(WebElement element) {

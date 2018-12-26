@@ -3,7 +3,6 @@ package by.van.steps;
 import by.van.common.FlightData;
 import by.van.common.PassangerData;
 import by.van.page.MainPage;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class MainPageSteps {
